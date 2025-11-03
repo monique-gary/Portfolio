@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monique Gary · Instructional Design Portfolio</title>
+  <meta name="description" content="Instructional Designer and Learning Strategist specializing in microlearning, blended programs, and performance support." />
+  <meta name="author" content="Monique Gary" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230b1a33'/%3E%3Ctext x='50' y='62' font-size='56' text-anchor='middle' fill='%23e0c979' font-family='Segoe UI, Calibri, system-ui, -apple-system, Arial, sans-serif'%3EM%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --navy: #0b1a33; /* navy blue */
+      --gold: #e0c979; /* antique gold */
+      --sage: #7a9b86; /* sage green */
+      --ink: #0f1720; /* near-black text */
+      --muted: #5b6673; /* muted text */
+      --bg: #ffffff;
+      --card: #f7f8fa;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(11,26,51,.12);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Segoe UI, Calibri, system-ui, -apple-system, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: var(--sage); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1100px, 92vw); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,.9); backdrop-filter: saturate(180%) blur(8px);
+      border-bottom: 1px solid #eef0f3;
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 12px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px rgba(224,201,121,.35); }
+    .brand strong { color: var(--navy); letter-spacing: .3px; }
+    .cta { display: flex; gap: 10px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px; border: 1px solid var(--sage); color: var(--navy); background: #fff; font-weight: 600; }
+    .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+    .btn:hover { box-shadow: 0 6px 18px rgba(11,26,51,.12); transform: translateY(-1px); }
+
+    .hero {
+      padding: 56px 0 28px; text-align: left; background: linear-gradient(180deg, #ffffff, #f9fafb);
+    }
+    .hero .eyebrow { color: var(--sage); text-transform: uppercase; font-weight: 700; letter-spacing: .12em; font-size: .8rem; }
+    .hero h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.15; margin: 10px 0 10px; color: var(--navy); }
+    .hero p.lead { font-size: clamp(16px, 2.5vw, 19px); color: var(--muted); max-width: 60ch; }
+    .chips { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { background: var(--card); border: 1px solid #e7eaee; padding: 6px 10px; border-radius: 999px; font-size: .9rem; color: var(--navy); }
+
+    section { padding: 34px 0; }
+    .section-title { display: flex; align-items: center; gap: 10px; color: var(--navy); }
+    .section-title .bar { width: 18px; height: 3px; background: var(--gold); border-radius: 2px; }
+
+    .grid { display: grid; gap: 16px; }
+    .grid.projects { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card { background: var(--card); border: 1px solid #e7eaee; border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin: 6px 0 6px; color: var(--navy); font-size: 1.1rem; }
+    .meta { font-size: .9rem; color: var(--muted); }
+    .tag { display: inline-block; padding: 2px 8px; border: 1px solid #dfe3e8; border-radius: 999px; font-size: .8rem; margin-right: 6px; color: var(--navy); background: #fff; }
+    .kpis { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .kpi { background: #fff; border: 1px dashed #cfd6dd; border-radius: 10px; padding: 6px 10px; font-size: .85rem; }
+
+    .about { display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; }
+    .about .card { height: 100%; }
+    @media (max-width: 820px){ .about { grid-template-columns: 1fr; } }
+
+    footer { border-top: 1px solid #eef0f3; padding: 28px 0 50px; color: var(--muted); }
+
+    /* Simple print tweak */
+    @media print { header, .cta { display: none !important; } body { color: #000; } .card { box-shadow: none; background: #fff; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Monique Gary",
+    "jobTitle": "Instructional Designer",
+    "url": "https://example.com/",
+    "sameAs": [],
+    "worksFor": {"@type": "Organization", "name": "L&D Launchpad"}
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Primary">
+      <div class="brand" aria-label="Home">
+        <span class="dot" aria-hidden="true"></span>
+        <strong>Monique Gary</strong>
+        <span style="color:var(--muted);">· Instructional Design</span>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#work">Work</a>
+        <a class="btn" href="#about">About</a>
+        <a class="btn primary" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Instructional Design · L&D Strategy</div>
+        <h1>Building engaging learning that moves the metrics.</h1>
+        <p class="lead">I design microlearning, blended programs, and performance support that solve real business problems. From needs analysis to measurement, I ship learning that sticks—and scales.</p>
+        <div class="chips" aria-label="Capabilities">
+          <span class="chip">Needs Analysis (ADDIE)</span>
+          <span class="chip">Microlearning</span>
+          <span class="chip">Blended Learning</span>
+          <span class="chip">Storyline · Rise 360</span>
+          <span class="chip">Camtasia</span>
+          <span class="chip">Facilitation</span>
+          <span class="chip">Evaluation (Kirkpatrick)</span>
+        </div>
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap: wrap;">
+          <a class="btn primary" href="#work">View selected work</a>
+          <a class="btn" href="https://1drv.ms/w/c/475018387b902f58/EQ1dVUxWEhhEiAAeXwqqEooBdbHYL1Jn3CJc_8pJYsBpUA?e=d2NdOY" target="_blank" rel="noopener">View résumé (OneDrive)</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="container">
+      <h2 class="section-title"><span class="bar"></span><span>Selected Work</span></h2>
+      <div class="grid projects">
+        <!-- PROJECT 1 -->
+        <article class="card" aria-labelledby="p1-title">
+          <div class="meta"><span class="tag">Microlearning</span><span class="tag">Manufacturing</span></div>
+          <h3 id="p1-title">Safety Essentials: 12-part microlearning series</h3>
+          <p>Scripted, storyboarded, and built a series of 3–5 minute modules focusing on high-frequency incidents. Included leader discussion guides and QR-linked job aids.</p>
+          <div class="kpis">
+            <span class="kpi">↓ 23% incident rate (90 days)</span>
+            <span class="kpi">95% completion</span>
+            <span class="kpi">CSAT 4.7/5</span>
+          </div>
+          <p><a href="cases/safety-essentials.html">Read case study</a> · <a href="https://360.articulate.com/review/content/60630306-80df-4243-af41-c07fb20c2505/review" target="_blank" rel="noopener">View eLearning demo</a></p>
+        </article>
+        <!-- PROJECT 2 -->
+        <article class="card" aria-labelledby="p2-title">
+          <div class="meta"><span class="tag">Blended Program</span><span class="tag">Field Services</span></div>
+          <h3 id="p2-title">Onboarding Redesign for Field Technicians</h3>
+          <p>Redesigned 6-week onboarding into a blended journey: preboarding portal, VILT labs, on-the-job checklists, and manager coaching plans aligned to performance milestones.</p>
+          <div class="kpis">
+            <span class="kpi">↓ time to proficiency by 28%</span>
+            <span class="kpi">↑ NPS +21</span>
+          </div>
+          <p><a href="cases/field-onboarding.html">Read case study</a> · <a href="https://360.articulate.com/review/content/df4de4a2-f8e6-4558-a54e-cd6da03b5177/review" target="_blank" rel="noopener">View eLearning demo</a></p>
+        </article>
+        <!-- PROJECT 3 -->
+        <article class="card" aria-labelledby="p3-title">
+          <div class="meta"><span class="tag">Performance Support</span><span class="tag">Sales Enablement</span></div>
+          <h3 id="p3-title">Just‑in‑Time Playbooks for Sales Associates</h3>
+          <p>Built mobile-first playbooks and short how-to videos embedded in SharePoint. Added search and role-based quick links to the top 20 tasks.</p>
+          <div class="kpis">
+            <span class="kpi">↓ handle time by 11%</span>
+            <span class="kpi">↑ adoption to 87%</span>
+          </div>
+          <p><a href="cases/sales-playbooks.html">Read case study</a> · <a href="https://360.articulate.com/review/content/d7fae53a-df7b-4dc3-81c1-49524c09be42/review" target="_blank" rel="noopener">View eLearning demo</a></p>
+        </article>
+        <!-- PROJECT 4 -->
+        <article class="card" aria-labelledby="p4-title">
+          <div class="meta"><span class="tag">eLearning</span><span class="tag">Compliance</span></div>
+          <h3 id="p4-title">Lab Safety: Interactive eLearning</h3>
+          <p>Storyline course with scenario branching and knowledge checks; paired with printable job aids and an evaluation plan.</p>
+          <div class="kpis">
+            <span class="kpi">↑ post‑test +32 pts</span>
+          </div>
+          <p><a href="cases/lab-safety.html">Read case study</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <h2 class="section-title"><span class="bar"></span><span>About</span></h2>
+      <div class="about">
+        <div class="card">
+          <h3>Hi, I’m Monique—an Instructional Designer and L&D strategist.</h3>
+          <p>I partner with operations, sales, and field leaders to translate goals into practical learning experiences. My toolkit includes ADDIE, action mapping, microlearning, VILT facilitation, and measurement strategies (Kirkpatrick + business KPIs).</p>
+          <p><strong>Tools:</strong> Articulate Storyline & Rise 360, Camtasia, Snagit, Vyond, Google Workspace, SharePoint, and LMS/LRS platforms.</p>
+          <p><strong>Focus areas:</strong> onboarding, sales & customer experience, safety & compliance, systems training, and performance support.</p>
+          <p><a href="https://1drv.ms/w/c/475018387b902f58/EQ1dVUxWEhhEiAAeXwqqEooBdbHYL1Jn3CJc_8pJYsBpUA?e=d2NdOY" target="_blank" rel="noopener">View résumé (OneDrive)</a></p>
+        </div>
+        <aside class="card" aria-label="Quick stats">
+          <h3>Quick stats</h3>
+          <ul>
+            <li>10+ years in L&D / ID</li>
+            <li>Programs shipped across manufacturing, field services, and corporate ops</li>
+            <li>Audience sizes from 25 to 5,000+</li>
+            <li>Microlearning, blended, and performance support focus</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2 class="section-title"><span class="bar"></span><span>Contact</span></h2>
+      <div class="card">
+        <p>Have a project, role, or collaboration in mind? I’d love to connect.</p>
+        <p><strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a> · <strong>LinkedIn:</strong> <a href="#">linkedin.com/in/monique‑gary</a></p>
+        <form name="contact" onsubmit="event.preventDefault(); alert('Thanks! This demo form does not send yet. Replace with your email tool or Netlify form.');" aria-label="Contact form" style="margin-top: 10px; display:grid; gap:10px; grid-template-columns: 1fr 1fr;">
+          <label>First name<input required type="text" placeholder="First" style="width:100%; padding:10px; border:1px solid #dfe3e8; border-radius:10px;"/></label>
+          <label>Last name<input required type="text" placeholder="Last" style="width:100%; padding:10px; border:1px solid #dfe3e8; border-radius:10px;"/></label>
+          <label style="grid-column:1/-1;">Email<input required type="email" placeholder="you@company.com" style="width:100%; padding:10px; border:1px solid #dfe3e8; border-radius:10px;"/></label>
+          <label style="grid-column:1/-1;">Message<textarea required placeholder="Tell me a bit about your goals…" rows="4" style="width:100%; padding:10px; border:1px solid #dfe3e8; border-radius:10px;"></textarea></label>
+          <div style="grid-column:1/-1; display:flex; gap:10px;">
+            <button class="btn primary" type="submit">Send</button>
+            <button class="btn" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="y"></span> Monique Gary · L&D Launchpad · Designed with navy, antique gold, and sage.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
